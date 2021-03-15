@@ -1,0 +1,51 @@
+<div class="for-content">
+    <div class="for-signup d-flex">
+        <div class="signup">
+            <form>
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control input-sm" [(ngModel)]="signUp.usrFirstName"    [ngModelOptions]="{standalone: true}"
+                      placeholder="Enter First Name">&nbsp;
+                    <input type="text" class="form-control" [(ngModel)]="signUp.usrLastName"   [ngModelOptions]="{standalone: true}"
+                       placeholder="Enter Last Name">
+                </div>
+
+                <div class="input-group mb-3">
+                    <select [(ngModel)]="signUp.ustTelCode" class="signup-select" [ngModelOptions]="{standalone: true}" (change)="ifSlctChngePlcHolder($event, signUp.ustTelCode)">
+                        <option *ngFor="let  country of teleOptList;let contrO = index;" value="{{country.value }}">{{country.label }}</option>
+                    </select>
+                    <input type="tel" class="form-control input-sm" [(ngModel)]="signUp.usrMobileNum" 
+                    placeholder="{{telePhonePlaceHolder}}"
+                    [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+                    </div>
+                    <input type="text" class="form-control input-sm" [(ngModel)]="signUp.usrEmailId" 
+                    [ngModelOptions]="{standalone: true}" placeholder="Enter Email">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
+                    </div>
+                    <input type="password" class="form-control input-sm" [(ngModel)]="signUp.usrSignupPwd" 
+                    [ngModelOptions]="{standalone: true}" placeholder="Enter Password">
+
+                </div>
+                <div class="input-group mb-3">
+                    <label class="radio-inline text-white">
+                        <input type="radio" [(ngModel)]="signUp.usrGender" [ngModelOptions]="{standalone: true}" value="M" /> Male
+                        <input type="radio" [(ngModel)]="signUp.usrGender"[ngModelOptions]="{standalone: true}" value="F" /> Female
+                    </label>
+                </div>
+                <button class="btn btn-success btn-block input-sm" (click)="ifLogin()">Sign Up</button>
+                <span class="text-white for-signup-account">Already had an Account ?
+                    <a href="javascript:return:false" (click)="ifSignup()">Login
+                    </a></span>
+            </form>
+
+        </div>
+    </div>
+</div>

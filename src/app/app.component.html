@@ -1,0 +1,75 @@
+<div class="for-header-class">
+    <div class="for-header-logo text-white">
+        Nope Post
+    </div>
+    <!-- <span class="for-space-between">
+        </span> -->
+    <div class="for-parent-search text-white">
+        <span>
+            <input type="search" name="search" />
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span>
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+        </span> &nbsp;&nbsp;&nbsp;&nbsp;
+        <span (click)="onToggle('heartOn')" *ngIf="onHeart">
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+        </span>
+        <span (click)="onToggle('heartOff')" *ngIf="offHeart">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span (click)="onToggle('on')" *ngIf="onnToggle">
+            <i class="fa fa-toggle-on" aria-hidden="true"></i>
+        </span>
+        <span (click)="onToggle('off')" *ngIf="offToggle">
+            <i class="fa fa-toggle-off" aria-hidden="true"></i>
+        </span>
+
+    </div>
+</div>
+<router-outlet></router-outlet>
+<div class="for-footer">
+    <ul class="for-nav">
+        <li class="text-white" (click)="footerRouting('About')"><a>About Us</a></li>&nbsp;&nbsp;&nbsp;
+        <li class="text-white" (click)="footerRouting('Contact')"><a>Contact Us</a></li>&nbsp;&nbsp;&nbsp;
+        <li class="text-white" (click)="footerRouting('Explore')"><a>Explore Us</a></li>
+    </ul>
+    <span *ngIf="Abouts">
+        <p class="text-white ml-4 text-center">
+            We are the most diligent suppliers of the stock and commidities to our first and most preferable clients to
+            make
+            them our engaged customers which last belief on us...
+        </p>
+    </span>
+    <span *ngIf="Contacts">
+        <p class="text-white ml-4 text-center">
+            Write an Email <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;&nbsp;
+            Our Face Book <i class="fa fa-facebook-square" aria-hidden="true"></i> page &nbsp;&nbsp;
+            Our Whatsapp <i class="fa fa-whatsapp" aria-hidden="true"></i>&nbsp;&nbsp;
+            Follow Us on Youtube <i class="fa fa-youtube-square" aria-hidden="true"></i>
+        </p>
+    </span>
+    <span *ngIf="Explores">
+        <p class="text-white ml-4 text-center">
+            Write a Feed Back <i class="fa fa-comments" (click)="onToggle('onComment')" *ngIf="onCom"
+                aria-hidden="true"></i>
+            <i class="fa fa-comments-o" (click)="onToggle('offComment')" *ngIf="offCom" aria-hidden="true"></i> <br>
+        </p>
+    </span>
+
+    <span class="ml-4 pt-2">
+
+        <p class="text-white text-center">
+            <i class="fa fa-copyright text-white" aria-hidden="true"></i>&nbsp;
+            All
+            Rights Reserved. ( Nope Posts or it's affiliates.) Powered By
+            Incredibles.
+        </p>
+    </span>
+
+
+</div>
