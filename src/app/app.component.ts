@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -16,12 +17,12 @@ export class AppComponent implements OnInit {
   public offToggle = false;
   public onCom = false;
   public offCom = false;
-  constructor() { }
+  constructor(private _routes: Router) { }
   ngOnInit() {
     this.onnToggle = true;
     this.onHeart = true;
     this.onCom = true;
-
+    // this.onSatisfactory()
   }
 
   footerRouting(ftrCntrl) {
@@ -49,6 +50,7 @@ export class AppComponent implements OnInit {
       case "on":
         this.onnToggle = false;
         this.offToggle = true;
+
         break;
       case "off":
         this.onnToggle = true;
@@ -72,5 +74,18 @@ export class AppComponent implements OnInit {
         this.offCom = false;
         break;
     }
+  }
+  onCartClick() {
+    this._routes.navigateByUrl('carts');
+  }
+
+  public popOverTitle = `Wanna Fuck`;
+  public showSatisFactory = false;
+  onSatisfactory() {
+    this.showSatisFactory = true;
+  }
+  justLogin() {
+    this._routes.navigateByUrl('login');
+    this.showSatisFactory = false;
   }
 }

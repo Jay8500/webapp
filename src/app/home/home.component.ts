@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  responsiveOptions;
   public cars = [
     {
       wa: 'Hello',
@@ -32,7 +33,30 @@ export class HomeComponent implements OnInit {
       ]
     }
   ]
-  constructor() { }
+  constructor() {
+    this.responsiveOptions = [
+      {
+        breakpoint: '1024px',
+        numVisible: 4,
+        numScroll: 4
+      },
+      {
+        breakpoint: '1024px',
+        numVisible: 3,
+        numScroll: 2
+      },
+      {
+        breakpoint: '1024px',
+        numVisible: 2,
+        numScroll: 1
+      },
+      {
+        breakpoint: '1024px',
+        numVisible: 1,
+        numScroll: 1
+      }
+    ];
+  }
 
   ngOnInit() {
   }

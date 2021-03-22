@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 
 import { SignupComponent } from './signup/signup.component';
 import { SharesModule } from './shares/shares.module';
+import { ShowcartsModule } from './carts/showcarts/showcarts.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SharesModule } from './shares/shares.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    ShowcartsModule,
     SharesModule,
   ],
   providers: [],

@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { CarouselModule } from 'primeng/carousel';
+import {DialogModule} from 'primeng/dialog';
 @NgModule({
   declarations: [],
   imports: [
     // CommonModule,
-    CarouselModule
+    CarouselModule,
+    DialogModule
   ],
   exports: [
     CommonModule,
-    CarouselModule
+    CarouselModule,
+    DialogModule
   ]
 })
 export class SharesModule { }

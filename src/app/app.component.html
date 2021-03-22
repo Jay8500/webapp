@@ -9,9 +9,20 @@
             <input type="search" name="search" />
         </span>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <span>
+        <span (click)="onSatisfactory()">
             <i class="fa fa-sign-in" aria-hidden="true"></i>
-        </span> &nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        <p-dialog header="{{popOverTitle}}" [(visible)]="showSatisFactory">
+            <div class="card text-center mb-1 text-white"
+                style="width:400px; align-items: center; background-color: #050B0F;">
+                <span> Just Sign In with <i class="fa fa-google" aria-hidden="true"></i></span>
+            </div>
+            <div class="card text-center text-white" (click)="justLogin()"
+                style="width:400px;align-items: center; background-color: #050B0F;">
+                <h4>Just Login.</h4>
+            </div>
+        </p-dialog>
+        &nbsp;&nbsp;&nbsp;&nbsp;
         <span (click)="onToggle('heartOn')" *ngIf="onHeart">
             <i class="fa fa-heart-o" aria-hidden="true"></i>
         </span>
@@ -19,7 +30,7 @@
             <i class="fa fa-heart" aria-hidden="true"></i>
         </span>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <span>
+        <span (click)="onCartClick()">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         </span>&nbsp;&nbsp;&nbsp;&nbsp;
         <span (click)="onToggle('on')" *ngIf="onnToggle">

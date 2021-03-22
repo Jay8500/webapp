@@ -1,17 +1,10 @@
 <div class="for-home-content">
-    <div class="for-navigation-global">
-        dfdfdf
-        <input type="search" class="for-dashboaord-parent-search" />
-    </div>
     <div class="class">
-        <p-carousel [value]="cars">
+        <p-carousel [value]="cars" [autoplayInterval]="2000" [numVisible]="1" [numScroll]="1">
             <ng-template let-car pTemplate="item">
-                <!-- <div class="card" style="width:500px" *ngFor="let ca of car.c; let c = index">
-                    <img src="../../assets/images/{{ca.imgs }}" width="1500px" height="500px" />
-                </div> -->
-                <div class="card" style="width:1200px;height: 500px;">
-                    <div class="card" *ngFor="let ca of car.c; let c = index">
-                        <img src="../../assets/images/{{ca.imgs }}" width="400px" height="400px" />
+                <div class="card-holder">
+                    <div *ngFor="let ca of car.c; let c = index">
+                        <img src="../../assets/images/{{ca.imgs }}" width="1221px" height="400px" />
                     </div>
                 </div>
             </ng-template>
