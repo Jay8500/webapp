@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
     this.onnToggle = true;
     this.onHeart = true;
     this.onCom = true;
+    // this.showSatisFactory = true;
     // this.onSatisfactory()
   }
 
@@ -79,7 +80,7 @@ export class AppComponent implements OnInit {
     this._routes.navigateByUrl('carts');
   }
 
-  public popOverTitle = `Wanna Fuck`;
+  public popOverTitle = `Be a Part of Us`;
   public showSatisFactory = false;
   onSatisfactory() {
     this.showSatisFactory = true;

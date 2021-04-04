@@ -1,13 +1,14 @@
 <div class="for-home-content">
-    <div class="class">
-        <p-carousel [value]="cars" [autoplayInterval]="2000" [numVisible]="1" [numScroll]="1">
-            <ng-template let-car pTemplate="item">
-                <div class="card-holder">
-                    <div *ngFor="let ca of car.c; let c = index">
-                        <img src="assets/images/{{ca.imgs }}" width="1221px" height="400px" />
-                    </div>
+    <p-carousel [value]="coverPagesPhotos" [autoplayInterval]="2000" [numVisible]="1" [numScroll]="1">
+        <ng-template let-car pTemplate="item">
+            <div class="card-holder">
+                    <h2 class="text-center text-black ">{{'Mobiles'}}</h2>
+                <div *ngFor="let ca of car.cP; let c = index">
+                    <img src="assets/{{ca.imgMs}}/{{ca.imgs }}" width="1221px" height="400px" />
                 </div>
-            </ng-template>
-        </p-carousel>
-    </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+
+    <router-outlet></router-outlet>
 </div>

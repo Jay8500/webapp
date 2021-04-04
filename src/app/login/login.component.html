@@ -1,29 +1,32 @@
-<div class="for-content">
-    <div class="for-login d-flex">
-        <div class="logins">
-            <form>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
-                    </div>
-                    <input type="text" class="form-control" [(ngModel)]="loginRequires.isUser" pInputText
-                        [title]="logErrorMsg.isUserReq" (blur)="onError('isUser')"
-                        [ngStyle]="{'border-color' :  erorClasses}" name="names" placeholder="Enter User Name">
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
-                    </div>
-                    <input type="password" class="form-control" [(ngModel)]="loginRequires.isPasswd" pInputText
-                        [title]="logErrorMsg.isPwdReq" (blur)="onError('isPasswd')"
-                        [ngStyle]="{'border-color' :  erorClassess }" name="names" placeholder="Enter Password">
-                </div>
-                <button class="btn btn-success btn-block" (click)="ifLogin()">Login</button><br>
-                <span class="text-white for-account">Didnt have an Account ?
-                    <a href="javascript:return:false" (click)="ifSignup()">Signup
-                    </a></span>
-            </form>
+<div class="for-home-content">
 
+    <div class="for-content">
+        <div class="for-login d-flex">
+            <div class="logins">
+                <form>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+                        </div>
+                        <input type="text" class="form-control" [(ngModel)]="loginRequires.isUser" pInputText
+                            [title]="logErrorMsg.isUserReq" (blur)="onError('isUser')"
+                            [ngStyle]="{'border-color' :  erorClasses}" name="names" placeholder="Enter User Name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
+                        </div>
+                        <input type="password" class="form-control" [(ngModel)]="loginRequires.isPasswd" pInputText
+                            [title]="logErrorMsg.isPwdReq" (blur)="onError('isPasswd')"
+                            [ngStyle]="{'border-color' :  erorClassess }" name="names" placeholder="Enter Password">
+                    </div>
+                    <button class="btn btn-success btn-block" (click)="ifLogin()">Login</button><br>
+                    <span class="text-white for-account">Didnt have an Account ?
+                        <a href="javascript:return:false" (click)="ifSignup()">Signup
+                        </a></span>
+                </form>
+
+            </div>
         </div>
     </div>
 </div>

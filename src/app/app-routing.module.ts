@@ -7,18 +7,17 @@ import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
   { path: '', pathMatch: 'full', redirectTo: '/home' },
+  {
+    path: 'home', component: HomeComponent,
+    children: [
+      {path : '', pathMatch:'full', redirectTo : '/tabs'},
+      { path: 'tabs', loadChildren: () => import('../app/tabs/showtabs/showtabs.module').then(m => m.ShowtabsModule) }
+    ]
+  },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'carts', component: ShowcartsComponent },
-  // {
-  //   path: 'home', component: HomeComponent,
-  //   children: [
-  //     // { path: 'carts', loadChildren: () => import("../app/carts/showcarts/showcarts.module").then(m => m.ShowcartsModule) }
-  //     // { path: 'home/list', loadChildren: () => import('../app/screen/lists/lists.module').then(m => m.ListsModule) }
-  //   ]
-  // },
 ];
 
 @NgModule({

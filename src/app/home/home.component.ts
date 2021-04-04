@@ -7,32 +7,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   responsiveOptions;
-  public cars = [
-    {
-      wa: 'Hello',
-      c: [
-        { imgs: 'img1.jpg' }
-      ]
-    },
-    {
-      wa: 'Hello',
-      c: [
-        { imgs: 'img2.jpg' }
-      ]
-    },
-    {
-      wa: 'Hello',
-      c: [
-        { imgs: 'img3.jpg' }
-      ]
-    },
-    {
-      wa: 'Hello',
-      c: [
-        { imgs: 'img5.jpg' }
-      ]
-    }
+  public coverPagesPhotos = [
   ]
+
   constructor() {
     this.responsiveOptions = [
       {
@@ -59,6 +36,43 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    this.coverPagesPhotos = [
+      {
+        cP: [
+          {
+            imgs: 'oppo.jpg',
+            imgMs: 'mobiles'
+          }
+        ]
+      },
+      {
+        cP: [
+          {
+            imgs: 'samsung.jpg',
+            imgMs: 'mobiles'
+          },
+        ]
+      },
+      {
+        cP: [
+          {
+            imgs: 'vivo.jpg',
+            imgMs: 'mobiles'
+          }
+        ]
+      },
+      // {
+      //   cP : [
+      //     {
+      //       imgs : 'girlsward.jpg',
+      //       imgMs : 'girls'
+      //     }
+      //   ]
+      // }
+    ]
+
+
   }
 
 }
