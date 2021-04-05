@@ -53,15 +53,12 @@
     /* display: flex; */
 }
 
-.for-footer{
-    max-width: 100%;
-    height: 160px;
-    position: sticky;
-   
-    top:2px;
-    /* background-color: #3498DB ; */
-    background-color: #050B0F ;
-}
+/* .for-footer{ */
+    /* width: 100%; */
+    /* height: 160px; */
+    /* position: sticky; */
+       /* background-color: #050B0F ; */
+ /* }   */
 
 .for-footer  .for-nav{
     display: flex;
@@ -204,4 +201,8 @@ z-index: -1;
 
 .my-ul{
     padding-left: 20px;
+}
+
+.for-pointer{
+    cursor: pointer;
 }
