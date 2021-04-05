@@ -13,11 +13,11 @@
             <i class="fa fa-sign-in" aria-hidden="true"></i>
         </span>
         <p-dialog header="{{popOverTitle}}" [(visible)]="showSatisFactory">
-            <div class="card text-center mb-1 text-white"
+            <div class="card text-center mb-1 text-white for-pointer"
                 style="width:400px; align-items: center; background-color: #050B0F;">
                 <span> Just Sign In with <i class="fa fa-google" aria-hidden="true"></i></span>
             </div>
-            <div class="card text-center text-white" (click)="justLogin()"
+            <div class="card text-center text-white for-pointer" (click)="justLogin()"
                 style="width:400px;align-items: center; background-color: #050B0F;">
                 <h4>Just Login.</h4>
             </div>
@@ -43,6 +43,9 @@
     </div>
 </div>
 <router-outlet></router-outlet>
+<footer>
+    <h3 class="text-black">sfsdfdsf</h3>
+</footer>
 <div class="for-footer">
     <ul class="for-nav">
         <li class="text-white" (click)="footerRouting('About')"><a>About Us</a></li>&nbsp;&nbsp;&nbsp;

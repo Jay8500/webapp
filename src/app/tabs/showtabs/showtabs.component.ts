@@ -28,6 +28,7 @@ export class ShowtabsComponent implements OnInit {
       tabDspl : 'Vivo'
 
     }
+    
   ];
   public chargerTabImg = [
     {
