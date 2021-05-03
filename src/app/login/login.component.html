@@ -9,16 +9,18 @@
                             <span class="input-group-text"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
                         </div>
                         <input type="text" class="form-control" [(ngModel)]="loginRequires.isUser" pInputText
-                            [title]="logErrorMsg.isUserReq" (blur)="onError('isUser')"
-                            [ngStyle]="{'border-color' :  erorClasses}" name="names" placeholder="Enter User Name">
+                            (blur)="onError('isUser')"
+                            pTooltip="Enter your username" tooltipPosition="top"
+                            [ngStyle]="{'border-color' :  erorClasses}" name="names" >
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
                         </div>
                         <input type="password" class="form-control" [(ngModel)]="loginRequires.isPasswd" pInputText
-                            [title]="logErrorMsg.isPwdReq" (blur)="onError('isPasswd')"
-                            [ngStyle]="{'border-color' :  erorClassess }" name="names" placeholder="Enter Password">
+                            (blur)="onError('isPasswd')"
+                            pTooltip="Enter Password" tooltipPosition="top"
+                            [ngStyle]="{'border-color' :  erorClassess }" name="names">
                     </div>
                     <button class="btn btn-success btn-block" (click)="ifLogin()">Login</button><br>
                     <span class="text-white for-account">Didnt have an Account ?

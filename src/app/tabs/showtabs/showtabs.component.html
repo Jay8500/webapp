@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm ml-4">
-    <ul class="navbar-nav" style=" margin-left: 530px; ">
+    <ul class="navbar-nav" style=" margin-left: 400px; ">
         <li class="text-black text-center nav-item" (click)="tabs('Mobiles')">
             <h3 [ngStyle]="{ 'color' : (mobiles == true  ? 'blue' : 'black' ) }">Mobiles</h3>
         </li>&nbsp;&nbsp;&nbsp;
@@ -9,9 +9,9 @@
     </ul>
 </nav>
 
-<div class="card tab-cards">
+<div class="card tab-cards" >
     <div class="row m-3" *ngIf="mobiles">
-        <div class="col-md-3" *ngFor="let mobiles of showTabImg; let mobi = index">
+        <div class="col-md-3 for-tabs-cards" *ngFor="let mobiles of showTabImg; let mobi = index">
             <div class="card" style="width: 200px;">
                 <div class="img-fluid">
                     <img src="assets/mobiles/{{mobiles.tabImg }}" width="200px" height="150px" /> <br>
@@ -40,7 +40,7 @@
 
 <div class="card tab-cards">
     <div class="row m-3" *ngIf="mobiles">
-        <div class="col-md-3" *ngFor="let mobiles of showTabImg; let mobi = index">
+        <div class="col-md-3 for-tabs-cards" *ngFor="let mobiles of showTabImg; let mobi = index">
             <div class="card" style="width: 200px;">
                 <div class="img-fluid">
                     <img src="assets/mobiles/{{mobiles.tabImg }}" width="200px" height="150px" /> <br>
@@ -67,9 +67,9 @@
     </div>
 </div>
 
-<div class="card tab-cards">
+<div class="card tab-cards ">
     <div class="row m-3" *ngIf="mobiles">
-        <div class="col-md-3" *ngFor="let mobiles of showTabImg; let mobi = index">
+        <div class="col-md-3 for-tabs-cards" *ngFor="let mobiles of showTabImg; let mobi = index">
             <div class="card" style="width: 200px;">
                 <div class="img-fluid">
                     <img src="assets/mobiles/{{mobiles.tabImg }}" width="200px" height="150px" /> <br>
@@ -96,9 +96,9 @@
     </div>
 </div>
 
-<div class="card tab-cards">
+<div class="card tab-cards  ">
     <div class="row m-3" *ngIf="mobiles">
-        <div class="col-md-3" *ngFor="let mobiles of showTabImg; let mobi = index">
+        <div class="col-md-3 for-tabs-cards" *ngFor="let mobiles of showTabImg; let mobi = index">
             <div class="card" style="width: 200px;">
                 <div class="img-fluid">
                     <img src="assets/mobiles/{{mobiles.tabImg }}" width="200px" height="150px" /> <br>
@@ -125,9 +125,9 @@
     </div>
 </div>
 
-<div class="card tab-cards">
+<div class="card tab-cards  ">
     <div class="row m-3" *ngIf="mobiles">
-        <div class="col-md-3" *ngFor="let mobiles of showTabImg; let mobi = index">
+        <div class="col-md-3 for-tabs-cards" *ngFor="let mobiles of showTabImg; let mobi = index">
             <div class="card" style="width: 200px;">
                 <div class="img-fluid">
                     <img src="assets/mobiles/{{mobiles.tabImg }}" width="200px" height="150px" /> <br>
@@ -154,9 +154,9 @@
     </div>
 </div>
 
-<div class="card tab-cards">
+<div class="card tab-cards ">
     <div class="row m-3" *ngIf="mobiles">
-        <div class="col-md-3" *ngFor="let mobiles of showTabImg; let mobi = index">
+        <div class="col-md-3 for-tabs-cards" *ngFor="let mobiles of showTabImg; let mobi = index">
             <div class="card" style="width: 200px;">
                 <div class="img-fluid">
                     <img src="assets/mobiles/{{mobiles.tabImg }}" width="200px" height="150px" /> <br>
@@ -182,9 +182,6 @@
         </div>
     </div>
 </div>
-
-<br>
-<br>
 <br>
 <br>
 <br>

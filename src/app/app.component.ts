@@ -76,7 +76,10 @@ export class AppComponent implements OnInit {
         break;
     }
   }
+  public cartValue = 0;
+  public innerSearchElement = `Search Here...`;
   onCartClick() {
+    this.cartValue++;
     this._routes.navigateByUrl('carts');
   }
 
@@ -88,5 +91,8 @@ export class AppComponent implements OnInit {
   justLogin() {
     this._routes.navigateByUrl('login');
     this.showSatisFactory = false;
+  }
+  onToggleClick() {
+    this._routes.navigateByUrl('admin-panel');
   }
 }

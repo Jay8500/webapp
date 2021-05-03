@@ -1,89 +1,163 @@
-<div class="for-header-class">
-    <div class="for-header-logo text-white">
-        Nope Post
-    </div>
-    <!-- <span class="for-space-between">
-        </span> -->
-    <div class="for-parent-search text-white">
-        <span>
-            <input type="search" name="search" />
-        </span>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <span (click)="onSatisfactory()">
-            <i class="fa fa-sign-in" aria-hidden="true"></i>
-        </span>
-        <p-dialog header="{{popOverTitle}}" [(visible)]="showSatisFactory">
-            <div class="card text-center mb-1 text-white for-pointer"
-                style="width:400px; align-items: center; background-color: #050B0F;">
-                <span> Just Sign In with <i class="fa fa-google" aria-hidden="true"></i></span>
+<div class="main">
+    <div class="header-class">
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #050B0F;">
+            <a class="navbar-brand text-white" href="#">Posts</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 text-white">
+                    <input class="form-control" type="search" style="font-size: medium;"
+                        [placeholder]="innerSearchElement">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span (click)="onSatisfactory()">
+                        <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    </span>
+                    <p-dialog header="{{popOverTitle}}" [(visible)]="showSatisFactory">
+                        <div class="card text-center mb-1 text-white for-pointer"
+                            style="width:400px; align-items: center; background-color: #050B0F;">
+                            <span> Just Sign In with <i class="fa fa-google" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="card text-center text-white for-pointer" (click)="justLogin()"
+                            style="width:400px;align-items: center; background-color: #050B0F;">
+                            <h4>Just Login.</h4>
+                        </div>
+                    </p-dialog>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span (click)="onToggle('heartOn')" *ngIf="onHeart">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    </span>
+                    <span (click)="onToggle('heartOff')" *ngIf="offHeart">
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                    </span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span (click)="onCartClick()">
+                        <i class="fa fa-shopping-cart" pBadge [value]="cartValue" size="small" aria-hidden="true"></i>
+                    </span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span (click)="onToggleClick()"> 
+                        <span (click)="onToggle('on')" *ngIf="onnToggle">
+                            <i class="fa fa-toggle-on" aria-hidden="true"></i>
+                        </span>
+                        <span (click)="onToggle('off')" *ngIf="offToggle">
+                            <i class="fa fa-toggle-off" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                </form>
             </div>
-            <div class="card text-center text-white for-pointer" (click)="justLogin()"
-                style="width:400px;align-items: center; background-color: #050B0F;">
-                <h4>Just Login.</h4>
-            </div>
-        </p-dialog>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <span (click)="onToggle('heartOn')" *ngIf="onHeart">
-            <i class="fa fa-heart-o" aria-hidden="true"></i>
-        </span>
-        <span (click)="onToggle('heartOff')" *ngIf="offHeart">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-        </span>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <span (click)="onCartClick()">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        </span>&nbsp;&nbsp;&nbsp;&nbsp;
-        <span (click)="onToggle('on')" *ngIf="onnToggle">
-            <i class="fa fa-toggle-on" aria-hidden="true"></i>
-        </span>
-        <span (click)="onToggle('off')" *ngIf="offToggle">
-            <i class="fa fa-toggle-off" aria-hidden="true"></i>
-        </span>
-
+        </nav>
     </div>
+    <div class="routers">
+        <div class="">
+            <!-- <div class="row"> -->
+
+            <!-- <div class="col-md-3"> -->
+            <router-outlet></router-outlet>
+            <!-- <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                jksdfjksdhfkjhsdfhsldahlsfd
+                            </h3>
+                        </div>
+
+                        <div class="card-body">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus nemo porro harum
+                            praesentium,
+                            necessitatibus fugiat! Debitis impedit, harum quam mollitia non laborum numquam velit autem
+                            dignissimos, totam ex fuga quos!
+                        </div>
+                    </div> -->
+            <!-- </div> -->
+            <!-- </div> -->
+        </div>
+    </div>
+    <footer class="bg-dark text-white footer-class">
+        <div class="container-fluid">
+            <div class="row">
+
+
+                <ul class="for-nav">
+                    <li class="text-white" (click)="footerRouting('About')"><a>About Us</a></li>&nbsp;&nbsp;&nbsp;
+                    <li class="text-white" (click)="footerRouting('Contact')"><a>Contact Us</a></li>
+                    &nbsp;&nbsp;&nbsp;
+                    <li class="text-white" (click)="footerRouting('Explore')"><a>Explore Us</a></li>
+                </ul>
+                <span *ngIf="Abouts">
+                    <p class="text-white ml-4 text-center">
+                        We are the most diligent suppliers of the stock and commidities to our first and most
+                        preferable
+                        clients
+                        to
+                        make
+                        them our engaged customers which last belief on us...
+                    </p>
+                </span>
+                <span *ngIf="Contacts">
+                    <p class="text-white ml-4 text-center">
+                        Write an Email <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;&nbsp;
+                        Our Face Book <i class="fa fa-facebook-square" aria-hidden="true"></i> page &nbsp;&nbsp;
+                        Our Whatsapp <i class="fa fa-whatsapp" aria-hidden="true"></i>&nbsp;&nbsp;
+                        Follow Us on Youtube <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                    </p>
+                </span>
+                <span *ngIf="Explores">
+                    <p class="text-white ml-4 text-center">
+                        Write a Feed Back <i class="fa fa-comments" (click)="onToggle('onComment')" *ngIf="onCom"
+                            aria-hidden="true"></i>
+                        <i class="fa fa-comments-o" (click)="onToggle('offComment')" *ngIf="offCom"
+                            aria-hidden="true"></i>
+                        <br>
+                    </p>
+                </span>
+
+                <span class="ml-4 pt-2">
+
+                    <p class="text-white text-center">
+                        <i class="fa fa-copyright text-white" aria-hidden="true"></i>&nbsp;
+                        All
+                        Rights Reserved. ( Nope Posts or it's affiliates.) Powered By
+                        Incredibles.
+                    </p>
+                </span>
+            </div>
+        </div>
+    </footer>
 </div>
-<router-outlet></router-outlet>
-<footer>
-    <h3 class="text-black">sfsdfdsf</h3>
-</footer>
-<div class="for-footer">
-    <ul class="for-nav">
-        <li class="text-white" (click)="footerRouting('About')"><a>About Us</a></li>&nbsp;&nbsp;&nbsp;
-        <li class="text-white" (click)="footerRouting('Contact')"><a>Contact Us</a></li>&nbsp;&nbsp;&nbsp;
-        <li class="text-white" (click)="footerRouting('Explore')"><a>Explore Us</a></li>
-    </ul>
-    <span *ngIf="Abouts">
-        <p class="text-white ml-4 text-center">
-            We are the most diligent suppliers of the stock and commidities to our first and most preferable clients to
-            make
-            them our engaged customers which last belief on us...
-        </p>
-    </span>
-    <span *ngIf="Contacts">
-        <p class="text-white ml-4 text-center">
-            Write an Email <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;&nbsp;
-            Our Face Book <i class="fa fa-facebook-square" aria-hidden="true"></i> page &nbsp;&nbsp;
-            Our Whatsapp <i class="fa fa-whatsapp" aria-hidden="true"></i>&nbsp;&nbsp;
-            Follow Us on Youtube <i class="fa fa-youtube-square" aria-hidden="true"></i>
-        </p>
-    </span>
-    <span *ngIf="Explores">
-        <p class="text-white ml-4 text-center">
-            Write a Feed Back <i class="fa fa-comments" (click)="onToggle('onComment')" *ngIf="onCom"
-                aria-hidden="true"></i>
-            <i class="fa fa-comments-o" (click)="onToggle('offComment')" *ngIf="offCom" aria-hidden="true"></i> <br>
-        </p>
-    </span>
-
-    <span class="ml-4 pt-2">
-
-        <p class="text-white text-center">
-            <i class="fa fa-copyright text-white" aria-hidden="true"></i>&nbsp;
-            All
-            Rights Reserved. ( Nope Posts or it's affiliates.) Powered By
-            Incredibles.
-        </p>
-    </span>
+<style>
+    .header-class {
+        /* position: absolute; */
+        /* top: 0; */
+        /* left: 0; */
+        width: 100%;
+        height: 70px;
+    }
 
 
-</div>
+
+    .footer-class {
+        /* position: absolute; */
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 300px;
+    }
+
+    .routers {
+        /* position: absolute; */
+        /* top: 0; */
+        /* left: 0; */
+        width: 100%;
+        margin: 10px 0 50px 0;
+        height: auto;
+        overflow-y: auto;
+        /* height: calc(100%-150px); */
+        /* padding-top: 80px; */
+
+    }
+</style>

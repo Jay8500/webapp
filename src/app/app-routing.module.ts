@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'home', component: HomeComponent,
     children: [
-      {path : '', pathMatch:'full', redirectTo : '/tabs'},
+      { path: '', pathMatch: 'full', redirectTo: '/tabs' },
       { path: 'tabs', loadChildren: () => import('../app/tabs/showtabs/showtabs.module').then(m => m.ShowtabsModule) }
     ]
   },
