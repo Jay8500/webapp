@@ -1,18 +1,18 @@
 <nav class="navbar navbar-expand-sm ml-4">
-    <ul class="navbar-nav" style=" margin-left: 400px; ">
+    <ul class="navbar-nav" style=" margin-left: 450px; ">
         <li class="text-black text-center nav-item" (click)="tabs('Mobiles')">
             <h3 [ngStyle]="{ 'color' : (mobiles == true  ? 'blue' : 'black' ) }">Mobiles</h3>
         </li>&nbsp;&nbsp;&nbsp;
-        <li class="text-black text-center  nav-item" (click)="tabs('Chargers')">
+        <!-- <li class="text-black text-center  nav-item" (click)="tabs('Chargers')">
             <h3 [ngStyle]="{ 'color' : (chargers == true  ? 'blue' : 'black' ) }">Chargers</h3>
-        </li>
+        </li> -->
     </ul>
 </nav>
 
 <div class="card tab-cards" >
     <div class="row m-3" *ngIf="mobiles">
-        <div class="col-md-3 for-tabs-cards" *ngFor="let mobiles of showTabImg; let mobi = index">
-            <div class="card" style="width: 200px;">
+        <div class="col-md-3 " *ngFor="let mobiles of showTabImg; let mobi = index">
+            <div class="card" style="width: 200px; margin: 12px;">
                 <div class="img-fluid">
                     <img src="assets/mobiles/{{mobiles.tabImg }}" width="200px" height="150px" /> <br>
                 </div>
@@ -23,9 +23,9 @@
             </div>
         </div>
     </div>
-    <div class="row m-3" *ngIf="chargers">
+    <!-- <div class="row m-3" *ngIf="chargers">
         <div class="col-md-3" *ngFor="let charges of chargerTabImg; let charger = index">
-            <div class="card" style="width: 200px;">
+            <div class="card" style="width: 300px;">
                 <div class="img-fluid">
                     <img src="assets/charges/{{charges.tabImg }}" width="200px" height="150px" /> <br>
                 </div>
@@ -35,10 +35,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
-<div class="card tab-cards">
+<!-- <div class="card tab-cards">
     <div class="row m-3" *ngIf="mobiles">
         <div class="col-md-3 for-tabs-cards" *ngFor="let mobiles of showTabImg; let mobi = index">
             <div class="card" style="width: 200px;">
@@ -181,7 +181,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <br>
 <br>
 <br>

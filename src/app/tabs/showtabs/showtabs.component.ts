@@ -9,24 +9,34 @@ export class ShowtabsComponent implements OnInit {
 
 
   public showTabImg = [
+   
     {
-      tabImg: 'mob.jpg',
-      tabDspl : 'Mobile'
-    },
-    {
-      tabImg: 'oppo.jpg',
-      tabDspl : 'Oppo'
-
-    },
-    {
-      tabImg: 'samsung.jpg',
-      tabDspl : 'Samsung'
-
-    },
-    {
-      tabImg: 'sam1.jpg',
+      tabImg: 'img1.jpg',
       tabDspl : 'Vivo'
-
+    },
+    {
+      tabImg: 'img2.jpg',
+      tabDspl : 'Vivo'
+    },
+    {
+      tabImg: 'img3.jpg',
+      tabDspl : 'Vivo'
+    },
+    {
+      tabImg: 'img4.jpg',
+      tabDspl : 'Vivo'
+    },
+    {
+      tabImg: 'img5.jpg',
+      tabDspl : 'Vivo'
+    },
+    {
+      tabImg: 'img6.jpg',
+      tabDspl : 'Vivo'
+    },
+    {
+      tabImg: 'img7.jpg',
+      tabDspl : 'Vivo'
     }
     
   ];
