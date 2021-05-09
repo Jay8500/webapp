@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarouselModule } from 'primeng/carousel';
 import {DialogModule} from 'primeng/dialog';
+import {RatingModule} from 'primeng/rating';
 import {TooltipModule} from 'primeng/tooltip';
 // import {DropdownModule} from 'primeng/dropdown';
 import {BadgeModule} from 'primeng/badge';
@@ -11,6 +12,8 @@ import {BadgeModule} from 'primeng/badge';
     // CommonModule,
     CarouselModule,
     DialogModule,
+    RatingModule,
+
     // DropdownModule
 
   ],
@@ -19,6 +22,7 @@ import {BadgeModule} from 'primeng/badge';
     CarouselModule,
     TooltipModule,
     DialogModule,
+    // RatingModule,
     BadgeModule,
     // DropdownModule
   ]

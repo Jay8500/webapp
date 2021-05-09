@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
       {
         cP: [
           {
-            imgs: 'samsung.jpg',
+            imgs: 'newtele.jpg',
             imgMs: 'mobiles'
           },
         ]

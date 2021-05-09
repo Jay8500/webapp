@@ -73,6 +73,9 @@ export class AppComponent implements OnInit {
       case "offComment":
         this.onCom = true;
         this.offCom = false;
+        if(!this.offCom){
+          this._routes.navigateByUrl('feed-back');
+        }
         break;
     }
   }
