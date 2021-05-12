@@ -5,6 +5,7 @@ import {DialogModule} from 'primeng/dialog';
 import {RatingModule} from 'primeng/rating';
 import {TooltipModule} from 'primeng/tooltip';
 // import {DropdownModule} from 'primeng/dropdown';
+import {AutoCompleteModule} from 'primeng/autocomplete';
 import {BadgeModule} from 'primeng/badge';
 @NgModule({
   declarations: [],
@@ -19,6 +20,7 @@ import {BadgeModule} from 'primeng/badge';
   ],
   exports: [
     CommonModule,
+    AutoCompleteModule,
     CarouselModule,
     TooltipModule,
     DialogModule,

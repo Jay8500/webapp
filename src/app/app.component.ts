@@ -80,7 +80,7 @@ export class AppComponent implements OnInit {
     }
   }
   public cartValue = 0;
-  public innerSearchElement = `Search Here...`;
+  public innerSearchElement = `Search With Love. `;
   onCartClick() {
     this.cartValue++;
     this._routes.navigateByUrl('carts');
