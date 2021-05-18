@@ -1,7 +1,9 @@
 <div class="main">
     <div class="header-class">
         <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #050B0F;">
-            <a class="navbar-brand text-white" href="#">Posts</a>
+            <a class="navbar-brand text-white" href="#">
+                <img src="../assets/girls/app.jpg" width="55px" height="40px" />
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -9,10 +11,11 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <!-- <li class="nav-item active">
                         <a class="nav-link text-white" href="#">Home &nbsp;&nbsp;Connect With us On<span
                                 class="sr-only">(current)</span></a>
-                    </li>
+                    </li> -->
+                    <li class="nav-item mt-2 text-white" style="font-size: medium;">Connect With Us On</li>
                     <li class="nav-item active">
                         <i class="fa fa-facebook-official nav-link  text-white" aria-hidden="true"></i>
                     </li>
@@ -24,8 +27,10 @@
                     </li>
                 </ul>
                 <form class="form-inline text-white">
-                    <input class="form-control" type="text" style="font-size: medium;padding-right: 580px;"
-                        [placeholder]="innerSearchElement">
+                    <!-- <input class="form-control" type="text" style="font-size: medium;padding-right: 580px;"
+                        [placeholder]="innerSearchElement"> -->
+                    <p-autoComplete [style]="{ 'width':'100px' }" [inputStyle]="{ 'width' : '700px' }"
+                        [placeholder]="innerSearchElement" style="margin-right: 100px;"></p-autoComplete>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <span (click)="onSatisfactory()">
                         <i class="fa fa-sign-in" aria-hidden="true"></i>

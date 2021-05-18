@@ -1,4 +1,4 @@
-<div class="for-home-content">
+<div class="for-home-content ">
 
     <div class="for-content">
         <div class="for-login d-flex">
@@ -9,18 +9,18 @@
                             <span class="input-group-text"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
                         </div>
                         <input type="text" class="form-control" [(ngModel)]="loginRequires.isUser" pInputText
-                            (blur)="onError('isUser')"
+                            (blur)="onError('isUser')" placeholder="Enter Name"
                             pTooltip="Enter your username" tooltipPosition="top"
-                            [ngStyle]="{'border-color' :  erorClasses}" name="names" >
+                            [ngStyle]="{'background-color' :  erorClasses}" name="names" >
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
                         </div>
                         <input type="password" class="form-control" [(ngModel)]="loginRequires.isPasswd" pInputText
-                            (blur)="onError('isPasswd')"
+                            (blur)="onError('isPasswd')" placeholder="Enter Password"
                             pTooltip="Enter Password" tooltipPosition="top"
-                            [ngStyle]="{'border-color' :  erorClassess }" name="names">
+                            [ngStyle]="{'background-color' :  erorClassess }" name="names">
                     </div>
                     <button class="btn btn-success btn-block" (click)="ifLogin()">Login</button><br>
                     <span class="text-white for-account">Didnt have an Account ?

@@ -82,7 +82,7 @@ export class LoginComponent implements OnInit {
   }
 
   ifSignup() {
-    this._router.navigateByUrl('signup');
+    this._router.navigateByUrl('sign-up');
   }
 
 }

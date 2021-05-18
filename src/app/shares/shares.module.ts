@@ -14,7 +14,7 @@ import {BadgeModule} from 'primeng/badge';
     CarouselModule,
     DialogModule,
     RatingModule,
-
+    AutoCompleteModule
     // DropdownModule
 
   ],

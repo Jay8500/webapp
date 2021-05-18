@@ -14,8 +14,8 @@ const routes: Routes = [
   {
     path: 'home', component: HomeComponent,
     children: [
-      { path: '', pathMatch: 'full', redirectTo: '/tabs' },
-      { path: 'tabs', loadChildren: () => import('../app/tabs/showtabs/showtabs.module').then(m => m.ShowtabsModule) },
+      { path: '', pathMatch: 'full', redirectTo: '/explore-prodcuts' },
+      { path: 'explore-prodcuts', loadChildren: () => import('../app/tabs/showtabs/showtabs.module').then(m => m.ShowtabsModule) },
     ]
   },
   {
@@ -27,6 +27,7 @@ const routes: Routes = [
     ]
   },
   { path: 'login', component: LoginComponent },
+  { path: 'sign-up', component: SignupComponent },
   { path: 'carts', component: ShowcartsComponent },
   { path: 'feed-back', component: FeedBackComponent },
 ];

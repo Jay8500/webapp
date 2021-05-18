@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { SharesModule } from './shares/shares.module';
 import { ShowcartsModule } from './carts/showcarts/showcarts.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ShowcartsModule } from './carts/showcarts/showcarts.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
@@ -29,7 +31,7 @@ import { ShowcartsModule } from './carts/showcarts/showcarts.module';
     // RatingModule,
     SharesModule,
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

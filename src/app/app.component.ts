@@ -51,11 +51,13 @@ export class AppComponent implements OnInit {
       case "on":
         this.onnToggle = false;
         this.offToggle = true;
-
+        var element = document.body;
+        element.classList.toggle('dark-mode');
         break;
       case "off":
         this.onnToggle = true;
         this.offToggle = false;
+      
         break;
       case "heartOn":
         this.onHeart = false;
