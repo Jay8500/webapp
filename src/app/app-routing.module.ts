@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ShowcartsComponent } from './carts/showcarts/showcarts.component';
+import { DashboardlistComponent } from './home/dashboardlist.component';
 import { FeedBackComponent } from './home/feed-back.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -10,12 +10,12 @@ import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/home' },
+  { path: '', pathMatch: 'full', redirectTo: '/webapp' },
   {
-    path: 'home', component: HomeComponent,
+    path: 'webapp', component: HomeComponent,
     children: [
-      { path: '', pathMatch: 'full', redirectTo: '/explore-prodcuts' },
-      { path: 'explore-prodcuts', loadChildren: () => import('../app/tabs/showtabs/showtabs.module').then(m => m.ShowtabsModule) },
+      { path: '', pathMatch: 'full', redirectTo: 'webapp/explore-prodcuts' },
+      { path: 'webapp/explore-prodcuts', loadChildren: () => import('../app/tabs/showtabs/showtabs.module').then(m => m.ShowtabsModule) },
     ]
   },
   {
@@ -26,10 +26,10 @@ const routes: Routes = [
       }
     ]
   },
-  { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignupComponent },
-  { path: 'carts', component: ShowcartsComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'feed-back', component: FeedBackComponent },
+  { path: 'dashboard', component: DashboardlistComponent }
 ];
 
 @NgModule({

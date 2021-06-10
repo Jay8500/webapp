@@ -30,6 +30,7 @@
                     <!-- <input class="form-control" type="text" style="font-size: medium;padding-right: 580px;"
                         [placeholder]="innerSearchElement"> -->
                     <p-autoComplete [style]="{ 'width':'100px' }" [inputStyle]="{ 'width' : '700px' }"
+                        [(ngModel)]="text" [suggestions]="results" (completeMethod)="search($event)"
                         [placeholder]="innerSearchElement" style="margin-right: 100px;"></p-autoComplete>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <span (click)="onSatisfactory()">

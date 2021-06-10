@@ -6,31 +6,31 @@
                 <form>
                     <div class="input-group mb-3">
 
-                        <input type="text" class="form-control input-sm" [(ngModel)]="signUp.usrFirstName"
+                        <input type="text" class="form-control input-sm" [(ngModel)]="signUp.firstName" name="first"
                             pTooltip="Enter First Name" tooltipPosition="top" placeholder="Your First Name"
-                          
                             [ngModelOptions]="{standalone: true}">&nbsp;
-                        <input type="text" class="form-control" [(ngModel)]="signUp.usrLastName"
+                        <input type="text" class="form-control" [(ngModel)]="signUp.lastName"
                             placeholder="Your Last Name" pTooltip="Enter Last Name" tooltipPosition="top"
                             [ngModelOptions]="{standalone: true}">
                     </div>
 
                     <div class="input-group mb-3">
-                        <select [(ngModel)]="signUp.ustTelCode" class="signup-select"
+                        <select [(ngModel)]="signUp.userTeleCode" class="signup-select" name="userTeleCode"
                             [ngModelOptions]="{standalone: true}"
-                            (change)="ifSlctChngePlcHolder($event, signUp.ustTelCode)">
+                            (change)="ifSlctChngePlcHolder($event, signUp.userTeleCode)">
                             <option *ngFor="let  country of teleOptList;let contrO = index;" value="{{country.value }}">
                                 {{country.label }}</option>
                         </select>
-                        <input type="tel" class="form-control input-sm" [(ngModel)]="signUp.usrMobileNum"
-                            placeholder="{{telePhonePlaceHolder}}" [ngModelOptions]="{standalone: true}">
+                        <input type="tel" class="form-control input-sm" [(ngModel)]="signUp.contactNumber"
+                            name="contactNumber" placeholder="{{telePhonePlaceHolder}}"
+                            [ngModelOptions]="{standalone: true}">
                     </div>
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
                         </div>
-                        <input type="text" class="form-control input-sm" [(ngModel)]="signUp.usrEmailId"
+                        <input type="text" class="form-control input-sm" [(ngModel)]="signUp.emailId" name="emailId"
                             placeholder="Your Email" pTooltip="Enter Email" tooltipPosition="top"
                             [ngModelOptions]="{standalone: true}">
                     </div>
@@ -38,16 +38,16 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
                         </div>
-                        <input type="password" class="form-control input-sm" [(ngModel)]="signUp.usrSignupPwd"
-                            pTooltip="Enter Password" tooltipPosition="top" placeholder="Your Password"
+                        <input type="password" class="form-control input-sm" [(ngModel)]="signUp.password"
+                            name="password" pTooltip="Enter Password" tooltipPosition="top" placeholder="Your Password"
                             [ngModelOptions]="{standalone: true}">
 
                     </div>
                     <div class="input-group mb-3">
                         <label class="radio-inline text-white">
-                            <input type="radio" [(ngModel)]="signUp.usrGender" [ngModelOptions]="{standalone: true}"
+                            <input type="radio" [(ngModel)]="signUp.gender" [ngModelOptions]="{standalone: true}"
                                 value="M" /> Male
-                            <input type="radio" [(ngModel)]="signUp.usrGender" [ngModelOptions]="{standalone: true}"
+                            <input type="radio" [(ngModel)]="signUp.gender" [ngModelOptions]="{standalone: true}"
                                 value="F" /> Female
                         </label>
                     </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import * as _ from 'node_modules/lodash';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,12 @@ export class AppComponent implements OnInit {
   public offToggle = false;
   public onCom = false;
   public offCom = false;
+
+  //autocomplete method... start
+  public text: String;
+  results: string[];
+  //autocomplete method...  end
+  public country = [];
   constructor(private _routes: Router) { }
   ngOnInit() {
     this.onnToggle = true;
@@ -24,6 +31,20 @@ export class AppComponent implements OnInit {
     this.onCom = true;
     // this.showSatisFactory = true;
     // this.onSatisfactory()
+
+    this.country = [
+      { country: 'India' },
+      { country: 'Indonesia' },
+      { country: 'France' },
+      { country: "Japan" },
+    ]
+  }
+
+  search(event) {
+    let query = event;
+    this.results = this.country.filter((filt, filtI) => {
+      return filt.country.match(query)
+    });
   }
 
   footerRouting(ftrCntrl) {
@@ -57,7 +78,7 @@ export class AppComponent implements OnInit {
       case "off":
         this.onnToggle = true;
         this.offToggle = false;
-      
+
         break;
       case "heartOn":
         this.onHeart = false;
@@ -75,7 +96,7 @@ export class AppComponent implements OnInit {
       case "offComment":
         this.onCom = true;
         this.offCom = false;
-        if(!this.offCom){
+        if (!this.offCom) {
           this._routes.navigateByUrl('feed-back');
         }
         break;
