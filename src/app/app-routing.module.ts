@@ -17,7 +17,7 @@ const routes: Routes = [
       { path: '', pathMatch: 'full', redirectTo: 'explore/prodcuts' },
       { path: 'explore/prodcuts', loadChildren: () => import('../app/tabs/showtabs/showtabs.module').then(m => m.ShowtabsModule) },
       { path: 'explore/product-specifications', loadChildren: () => import('../app/products/prospecs/prospecs.module').then(m => m.ProspecsModule) },
-     // { path: 'explore/product-view', loadChildren: () => import('../app/products/prospecs/proview.module').then(m => m.ProviewModule) }
+      // { path: 'explore/product-view', loadChildren: () => import('../app/products/prospecs/proview.module').then(m => m.ProviewModule) }
     ]
   },
   { path: 'sign-up', component: SignupComponent },
