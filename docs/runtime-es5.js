@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"app-tabs-showtabs-showtabs-module":"app-tabs-showtabs-showtabs-module"}[chunkId]||chunkId) +    "-es5.js"
+/******/ 		return __webpack_require__.p + "" + ({"app-products-prospecs-prospecs-module":"app-products-prospecs-prospecs-module","app-tabs-showtabs-showtabs-module":"app-tabs-showtabs-showtabs-module"}[chunkId]||chunkId) +    "-es5.js"
 /******/ 	}
 /******/
 /******/ 	// The require function

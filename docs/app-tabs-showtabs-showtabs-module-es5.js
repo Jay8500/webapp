@@ -769,12 +769,11 @@
               imgId: catIndx,
               imgDisp: cats[catIndx].tabDspl,
               tabRepeat: cats[catIndx].tabRepeat
-            }; // let storeObje = [];
-            // storeObje.push(storeObject);
-
+            };
             var storeCats = localStorage.setItem('CatItems', JSON.stringify(storeObject));
 
-            this._rou.navigateByUrl('product-specifications');
+            this._rou.navigateByUrl('webapp/explore/product-specifications'); // this._rou.navigate(['explore/product-specifications']);
+
           }
         }]);
 

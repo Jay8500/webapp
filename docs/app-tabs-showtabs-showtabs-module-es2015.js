@@ -453,10 +453,9 @@ class ShowtabsComponent {
             imgDisp: cats[catIndx].tabDspl,
             tabRepeat: cats[catIndx].tabRepeat
         };
-        // let storeObje = [];
-        // storeObje.push(storeObject);
         let storeCats = localStorage.setItem('CatItems', JSON.stringify(storeObject));
-        this._rou.navigateByUrl('product-specifications');
+        this._rou.navigateByUrl('webapp/explore/product-specifications');
+        // this._rou.navigate(['explore/product-specifications']);
     }
 }
 ShowtabsComponent.ɵfac = function ShowtabsComponent_Factory(t) { return new (t || ShowtabsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"])); };
